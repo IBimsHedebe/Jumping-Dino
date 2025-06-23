@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6a5cd567a32e3de47a547d1cf2407f82
+guid: ffae8a858d9d29241a121c39703f8174
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,9 +122,9 @@ TextureImporter:
       name: bite_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 5
         y: 2
-        width: 17
+        width: 15
         height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -146,7 +146,7 @@ TextureImporter:
         serializedVersion: 2
         x: 29
         y: 2
-        width: 18
+        width: 17
         height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -168,7 +168,7 @@ TextureImporter:
         serializedVersion: 2
         x: 53
         y: 2
-        width: 19
+        width: 18
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bite_0: -4509359564991771626
+      bite_1: 6035551703564059206
+      bite_2: 8162908817550238793
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

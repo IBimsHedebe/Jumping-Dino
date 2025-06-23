@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ed35523e31316244288c77485c7054ba
+guid: a2a0e1dad992e3640bd90f82c40d9b7c
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,9 +122,9 @@ TextureImporter:
       name: avoid_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 5
         y: 2
-        width: 17
+        width: 15
         height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -144,9 +144,9 @@ TextureImporter:
       name: avoid_1
       rect:
         serializedVersion: 2
-        x: 25
+        x: 28
         y: 2
-        width: 17
+        width: 14
         height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -166,9 +166,9 @@ TextureImporter:
       name: avoid_2
       rect:
         serializedVersion: 2
-        x: 48
+        x: 51
         y: 2
-        width: 17
+        width: 14
         height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      avoid_0: 735098819995849586
+      avoid_1: -8856766687276368048
+      avoid_2: 5925583313521037286
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

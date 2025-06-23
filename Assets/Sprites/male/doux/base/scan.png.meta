@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 71f272a3a94f4d6459a8f7aa426d28ec
+guid: ded9e85049bba7d42a2d4ced86f7546f
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -90,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -131,9 +131,9 @@ TextureImporter:
       name: scan_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 5
         y: 2
-        width: 17
+        width: 15
         height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -153,9 +153,9 @@ TextureImporter:
       name: scan_1
       rect:
         serializedVersion: 2
-        x: 27
+        x: 29
         y: 2
-        width: 17
+        width: 15
         height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -175,9 +175,9 @@ TextureImporter:
       name: scan_2
       rect:
         serializedVersion: 2
-        x: 51
+        x: 53
         y: 2
-        width: 17
+        width: 15
         height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -197,9 +197,9 @@ TextureImporter:
       name: scan_3
       rect:
         serializedVersion: 2
-        x: 75
+        x: 77
         y: 2
-        width: 17
+        width: 15
         height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -219,9 +219,9 @@ TextureImporter:
       name: scan_4
       rect:
         serializedVersion: 2
-        x: 99
+        x: 101
         y: 2
-        width: 17
+        width: 15
         height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -241,9 +241,9 @@ TextureImporter:
       name: scan_5
       rect:
         serializedVersion: 2
-        x: 123
+        x: 125
         y: 2
-        width: 17
+        width: 15
         height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      scan_0: -6972684935863808132
+      scan_1: 2715503502510690781
+      scan_2: -7785933831706789168
+      scan_3: 6934613086553378638
+      scan_4: 8390270361199352855
+      scan_5: -8779688227974700679
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
