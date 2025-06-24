@@ -6,30 +6,45 @@ public class Animations : MonoBehaviour
     [SerializeField] private Animator animator;
     void Update()
     {
-        float moveInput = Input.GetAxis("Horizontal");
+        _Turning();
+        _Jumping();
+        _Walking();
+    }
 
+    void _Turning()
+    {
+        float moveInput = Input.GetAxis("Horizontal");
         if (moveInput > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
-            animator.SetBool("isWalking", true);
         }
         else if (moveInput < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1); // Flips horizontally
-            animator.SetBool("isWalking", true);
+            transform.localScale = new Vector3(-1, 1, 1); // Flips horizontally   
         }
-        else
-        {
-            animator.SetBool("isWalking", false);
-        }
-
-        if (Input.GetButtonDown("Jump") && !movement.isGrounded)
+    }
+    void _Jumping()
+    {
+        if (!movement.isGrounded)
         {
             animator.SetBool("isJumping", true);
         }
         if (movement.isGrounded)
         {
             animator.SetBool("isJumping", false);
+        }
+    }
+
+    void _Walking()
+    {
+        float moveInput = Input.GetAxis("Horizontal");
+        if (moveInput != 0)
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
         }
     }
 }
