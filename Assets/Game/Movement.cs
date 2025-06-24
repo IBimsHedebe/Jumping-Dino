@@ -2,14 +2,11 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    private bool isGrounded;
+    public bool isGrounded;
     private Rigidbody2D rb;
 
     private float speed = 12.0f;
     private float jumpForce = 14.0f;
-
-    private Vector2 movement;
-    private Vector2 jumping;
 
     void Start()
     {
