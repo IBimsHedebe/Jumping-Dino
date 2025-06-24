@@ -320,19 +320,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbf0d399508583149bb4e06b9f45e9a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GroundCheck: {fileID: 258787446}
-  groundCheckRadius: 0.2
+  moveSpeed: 12
+  jumpForce: 14
+  wallSlideSpeed: 1
+  groundCheck: {fileID: 258787446}
+  wallCheck: {fileID: 564334340}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  isGrounded: 0
-  WallCheck: {fileID: 564334340}
-  wallCheckDistance: 0.5
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
-  isWallSliding: 0
-  wallSlideSpeed: 1
+  isGrounded: 0
+  wallJumpForce: {x: 3, y: 10}
+  wallJumpDuration: 0.2
 --- !u!50 &557599268
 Rigidbody2D:
   serializedVersion: 5
@@ -370,7 +371,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: fbfc99968e3866647b17ead02808e86c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
