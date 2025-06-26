@@ -34,7 +34,6 @@ public class World_Gen : MonoBehaviour
         for (int i = 0; i < platformCount; i++)
         {
             // Randomly generate the position and size of the platform
-
             GameObject obj = Instantiate(platform);
             obj.transform.position = new Vector2(posX + Random.Range(minLength, maxLength) / 2 + Random.Range(minGap, maxGap), posY + Random.Range(minHeight, maxHeight));
             obj.transform.localScale = new Vector2(Random.Range(minLength, maxLength), 1);
@@ -48,7 +47,7 @@ public class World_Gen : MonoBehaviour
     public void GenerateStaircase()
     {
 
-        float scLength = Random.Range(minLength * 9, maxLength * 9);
+        float scLength = Random.Range(10, 15);
         float scHeight = Random.Range(minHeight * 30, maxHeight * 30);
 
         for (int i = 0; i < scHeight; i++)
@@ -63,25 +62,27 @@ public class World_Gen : MonoBehaviour
             obj2.transform.localScale = new Vector2(1, 1);
             obj2.name = "Wall_" + i + "_2";
         }
-        Destroy(GameObject.Find("Wall_1"));
-        Destroy(GameObject.Find("Wall_2"));
-        Destroy(GameObject.Find("Wall_3"));
-        Destroy(GameObject.Find("Wall_4"));
-        Destroy(GameObject.Find("Wall_5"));
+
+        // Destroy the walls that are not needed
+        for (int i = 4; i < 9; i++)
+        {
+            Destroy(GameObject.Find("Wall_" + i));
+        }
 
         for (int i = 0; i < scHeight; i += 6)
         {
             float lenght = Random.Range(minLength, maxLength);
             GameObject obj = Instantiate(platform);
-            obj.transform.position = new Vector2(posX + scLength - lenght, posY + i);
+            obj.transform.position = new Vector2(posX + scLength - (lenght / 2), posY + i);
             obj.transform.localScale = new Vector2(lenght, 1);
             obj.name = "Stair_" + i;
         }
+
         for (int i = 0; i < scHeight; i += 6)
         {
             float lenght = Random.Range(minLength, maxLength);
             GameObject obj = Instantiate(platform);
-            obj.transform.position = new Vector2(posX + lenght, posY + i);
+            obj.transform.position = new Vector2(posX + (lenght / 2) - (1 / 2), posY + i + 3);
             obj.transform.localScale = new Vector2(lenght, 1);
             obj.name = "Stair_" + i + "_2";
         }
