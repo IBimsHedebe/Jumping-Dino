@@ -21,7 +21,6 @@ public class PlatformTracker : MonoBehaviour
         {
             if (touchedPlatforms.Add(collision.collider.gameObject))
             {
-                Debug.Log("Touched new platform! Total: " + touchedPlatforms.Count);
                 UpdateUI();
                 OnPlatformCountChanged?.Invoke(touchedPlatforms.Count);
             }
@@ -34,7 +33,6 @@ public class PlatformTracker : MonoBehaviour
         {
             if (touchedPlatforms.Add(other.gameObject))
             {
-                Debug.Log("Touched new platform! Total: " + touchedPlatforms.Count);
                 UpdateUI();
                 OnPlatformCountChanged?.Invoke(touchedPlatforms.Count);
             }
