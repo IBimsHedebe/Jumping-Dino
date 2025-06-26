@@ -416,7 +416,7 @@ Transform:
   m_GameObject: {fileID: 557599266}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 1.52, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -647,9 +647,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271dd29f57dcfa64096282a79e5006a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 50
-  height: 50
-  tile: {fileID: 2345325323746446180, guid: b724cd49a190c5d4dbf91b4174fad060, type: 3}
+  minLength: 2
+  maxLength: 6
+  minHeight: 1
+  maxHeight: 5
+  platformCount: 20
+  minGap: 2
+  maxGap: 5
+  platform: {fileID: 7088023364905720374, guid: cb389af0bcc4b8d45b6ce0efbaf19b90, type: 3}
 --- !u!1 &2031884363
 GameObject:
   m_ObjectHideFlags: 0
