@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8630397615926643322}
   m_Layer: 6
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,9 +143,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6659658021353652695}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

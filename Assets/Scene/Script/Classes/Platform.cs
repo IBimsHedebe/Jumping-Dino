@@ -5,6 +5,8 @@ public class Platform
     public float length;
     public float height;
 
+    public bool isTouched = false; // Indicates if the platform has been touched by the player
+
     // Platform types
     // Normal, Vanishing, Moving
     public bool isVanishing;
