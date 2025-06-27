@@ -30,6 +30,7 @@ public class World_Gen : MonoBehaviour
         {
             GameObject plat = Instantiate(platform, new Vector3(posX + i, posY, 0), Quaternion.identity);
             plat.name = "Spawn_Platform_" + i;
+            plat.transform.parent = transform; // Set parent to World_Gen for better organization
         }
         posX += platformLength; // Update position for the next platform
     }
@@ -48,6 +49,7 @@ public class World_Gen : MonoBehaviour
                 {
                     GameObject plat = Instantiate(platform, new Vector3(posX + gap + j + platformLength / 2, posY + height, 0), Quaternion.identity);
                     plat.name = "Platform_Right_" + i + "_" + j;
+                    plat.transform.parent = transform; // Set parent to World_Gen for better organization
                 }
                 posX += platformLength + gap; // Update position for the next platform
             }
@@ -64,6 +66,7 @@ public class World_Gen : MonoBehaviour
                 {
                     GameObject plat = Instantiate(platform, new Vector3(-posX - gap - j - platformLength / 2, posY + height, 0), Quaternion.identity);
                     plat.name = "Platform_Left_" + i + "_" + j;
+                    plat.transform.parent = transform; // Set parent to World_Gen for better organization
                 }
                 posX -= platformLength - gap; // Update position for the next platform
             }
