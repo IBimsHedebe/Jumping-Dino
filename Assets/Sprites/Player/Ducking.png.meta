@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,67 +119,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle - Kopie_0
+      name: Ducking_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 23
-        height: 17
+        x: 1
+        y: 1
+        width: 21
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 530eae85b2208d3e0800000000000000
-      internalID: -2028869246931771339
+      spriteID: ea179f3914ba8f840bb9741825ced616
+      internalID: 1989025805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle - Kopie_1
+      name: Ducking_1
       rect:
         serializedVersion: 2
-        x: 24
-        y: 0
-        width: 23
-        height: 17
+        x: 25
+        y: 1
+        width: 21
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0390e31a03ed52860800000000000000
-      internalID: 7504648654527793456
+      spriteID: 7d5faba64dfc7b44b9dd25ca4b3a6619
+      internalID: -1702527172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle - Kopie_2
+      name: Ducking_2
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 23
-        height: 17
+        x: 49
+        y: 1
+        width: 21
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 35d3bc396b4745be0800000000000000
-      internalID: -1489437249240351405
+      spriteID: bb64d6ba0ac0f7b4aa571b5f3fe8de4c
+      internalID: 1557982166
       vertices: []
       indices: 
       edges: []
@@ -188,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7b198ddb84dd0f84bb73209fcb7a34a3
     internalID: 0
     vertices: []
     indices: 
@@ -196,11 +196,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      idle - Kopie_0: -2028869246931771339
-      idle - Kopie_1: 7504648654527793456
-      idle - Kopie_2: -1489437249240351405
+      Ducking_0: 1989025805
+      Ducking_1: -1702527172
+      Ducking_2: 1557982166
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
