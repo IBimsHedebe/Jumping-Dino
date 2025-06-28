@@ -30,8 +30,17 @@ public class Movement : MonoBehaviour
         _GroundCheck();
         _WallSlide();    // check before move
         _WallJumping();  // check before move
-        _Move();
         _Jump();
+        _Move();
+        _Duck();
+    }
+
+    void _Duck()
+    {
+        if (Input.GetKeyDown("s") && isGrounded)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x * moveSpeed * 0.75f, rb.linearVelocity.y);
+        }
     }
 
     void _Move()

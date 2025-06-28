@@ -9,6 +9,19 @@ public class Animations : MonoBehaviour
         _Turning();
         _Jumping();
         _Walking();
+        Ducking();
+    }
+
+    void Ducking()
+    {
+        if (Input.GetKeyDown("s") && movement.isGrounded)
+        {
+            animator.SetBool("isDucking", true);
+        }
+        else if (Input.GetKeyUp("s"))
+        {
+            animator.SetBool("isDucking", false);
+        }
     }
 
     void _Turning()

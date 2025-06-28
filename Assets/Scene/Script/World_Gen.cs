@@ -25,7 +25,7 @@ public class World_Gen : MonoBehaviour
 
     public void _StartPlatform()
     {
-        float platformLength = Random.Range(minLength, maxLength);
+        int platformLength = Mathf.RoundToInt(Random.Range(minLength, maxLength));
         for (int i = 0; i < platformLength; i++) // Generate the Spawn Platform
         {
             GameObject plat = Instantiate(platform, new Vector3(posX + i, posY, 0), Quaternion.identity);
@@ -39,37 +39,29 @@ public class World_Gen : MonoBehaviour
     {
         if (isRight)
         {
+            // Generate a section to the right
             for (int i = 0; i < platformCount; i++)
             {
-                float gap = Random.Range(minGap, maxGap);
-                float height = Random.Range(minHeight, maxHeight);
-                float platformLength = Random.Range(minLength, maxLength);
+                // Add gap before placing platform
+                int gap = Mathf.RoundToInt(Random.Range(minGap, maxGap));
+                posX += gap;
+                
+                int platformLength = Mathf.RoundToInt(Random.Range(minLength, maxLength));
+                int height = Mathf.RoundToInt(Random.Range(minHeight, maxHeight));
 
+                // Create the platform section
                 for (int j = 0; j < platformLength; j++)
                 {
-                    GameObject plat = Instantiate(platform, new Vector3(posX + gap + j + platformLength / 2, posY + height, 0), Quaternion.identity);
+                    GameObject plat = Instantiate(platform, new Vector3(posX + j, posY + height, 0), Quaternion.identity);
                     plat.name = "Platform_Right_" + i + "_" + j;
                     plat.transform.parent = transform; // Set parent to World_Gen for better organization
                 }
-                posX += platformLength + gap; // Update position for the next platform
+                posX += platformLength; // Update position for the next section
             }
         }
         else
         {
-            for (int i = 0; i < platformCount; i++)
-            {
-                float gap = Random.Range(minGap, maxGap);
-                float height = Random.Range(minHeight, maxHeight);
-                float platformLength = Random.Range(minLength, maxLength);
-
-                for (int j = 0; j < platformLength; j++)
-                {
-                    GameObject plat = Instantiate(platform, new Vector3(-posX - gap - j - platformLength / 2, posY + height, 0), Quaternion.identity);
-                    plat.name = "Platform_Left_" + i + "_" + j;
-                    plat.transform.parent = transform; // Set parent to World_Gen for better organization
-                }
-                posX -= platformLength - gap; // Update position for the next platform
-            }
+            // Generate a section to the left
         }
     }
 }
