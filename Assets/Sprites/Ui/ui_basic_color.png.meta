@@ -145,7 +145,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -183,7 +183,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1047,7 +1047,44 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ui_basic_color_0: -1272754047088364088
+      ui_basic_color_1: -1670978177064164412
+      ui_basic_color_10: 1671691383922924732
+      ui_basic_color_11: -5754015059159379784
+      ui_basic_color_12: 5651718903533402131
+      ui_basic_color_13: 5238239576279862624
+      ui_basic_color_14: 2650314468265576739
+      ui_basic_color_15: 40354043087161815
+      ui_basic_color_16: -5528240135814658910
+      ui_basic_color_17: 2310894126344378683
+      ui_basic_color_18: 908550258925756458
+      ui_basic_color_19: -5775694067911215319
+      ui_basic_color_2: -2713976304949571912
+      ui_basic_color_20: -3229496347176659359
+      ui_basic_color_21: 1400582136902197178
+      ui_basic_color_22: 8374465693342117160
+      ui_basic_color_23: 543159855295513653
+      ui_basic_color_24: -7659302348233224481
+      ui_basic_color_25: 2962752371975083724
+      ui_basic_color_26: 5521898056553405431
+      ui_basic_color_27: 2158522676549323132
+      ui_basic_color_28: -5526788821269798813
+      ui_basic_color_29: 8640996761774534359
+      ui_basic_color_3: 6625499849495893484
+      ui_basic_color_30: -4065078035600986369
+      ui_basic_color_31: -2679851872873196128
+      ui_basic_color_32: 3484011083857764688
+      ui_basic_color_33: -7065662404816833136
+      ui_basic_color_34: 379225988000303820
+      ui_basic_color_35: -9143455267953647519
+      ui_basic_color_36: -5544950670622036568
+      ui_basic_color_4: 1761855682666589959
+      ui_basic_color_5: -3665498537551608319
+      ui_basic_color_6: -7732946999411266507
+      ui_basic_color_7: 4667755090209647610
+      ui_basic_color_8: -6931745859292649668
+      ui_basic_color_9: 6522628494050518592
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -145,7 +145,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -183,7 +183,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1047,7 +1047,44 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ui_red_0: 1415434106881102962
+      ui_red_1: 4103961115943970536
+      ui_red_10: -4725552781567560094
+      ui_red_11: -5884585656197394928
+      ui_red_12: 1185356195375810946
+      ui_red_13: -8342330089145642276
+      ui_red_14: 4648631917434452367
+      ui_red_15: 8708284741138143350
+      ui_red_16: 4932356883673385127
+      ui_red_17: 1204161678376898774
+      ui_red_18: -5078134421331537417
+      ui_red_19: -2525633710757048704
+      ui_red_2: 2562726682711144604
+      ui_red_20: 9195204485362436507
+      ui_red_21: 6111833969543016522
+      ui_red_22: -3805754523653474462
+      ui_red_23: 5038131662231348503
+      ui_red_24: -79945954102895162
+      ui_red_25: 358312819605986661
+      ui_red_26: -7763114806682866512
+      ui_red_27: -6922141013484519393
+      ui_red_28: -1330514112983234677
+      ui_red_29: 8615737091136876564
+      ui_red_3: -4472284093697714449
+      ui_red_30: 4213733261033589356
+      ui_red_31: -5277731507670691966
+      ui_red_32: 1825891386655264906
+      ui_red_33: -6871675755368329416
+      ui_red_34: -2429999716761698388
+      ui_red_35: -9214901910848822204
+      ui_red_36: 9199577500231220461
+      ui_red_4: 5101230839062054125
+      ui_red_5: 4332883711790811742
+      ui_red_6: 3424468437820009722
+      ui_red_7: -1948358277416981401
+      ui_red_8: 3741685308737044453
+      ui_red_9: -8838772123611392562
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

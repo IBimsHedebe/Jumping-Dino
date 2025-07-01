@@ -145,7 +145,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -183,7 +183,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1047,7 +1047,44 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ui_black_0: -6241685908728069002
+      ui_black_1: -3782361937412184466
+      ui_black_10: -3114283001650967446
+      ui_black_11: -2323959872780385191
+      ui_black_12: -4641624301839069989
+      ui_black_13: -5384181115554493195
+      ui_black_14: 2564425791775828490
+      ui_black_15: 8982386414558275983
+      ui_black_16: 2625025496430641699
+      ui_black_17: -5648446917853518234
+      ui_black_18: 7379285805869168475
+      ui_black_19: -609931112815393195
+      ui_black_2: -26245788600212062
+      ui_black_20: -6327489777816588740
+      ui_black_21: -2675078652102120872
+      ui_black_22: 3228153201722533316
+      ui_black_23: 5589190284166876957
+      ui_black_24: -4602632106419095001
+      ui_black_25: 4366315063965412793
+      ui_black_26: -624600818031060342
+      ui_black_27: -3585899986397404946
+      ui_black_28: 3918690177611202919
+      ui_black_29: -7423723017801319213
+      ui_black_3: -3803344320277410450
+      ui_black_30: -597483712763808278
+      ui_black_31: -4540249383306869038
+      ui_black_32: -4613546445949940423
+      ui_black_33: -8651747868741574665
+      ui_black_34: -7275990047870020292
+      ui_black_35: -424548317976124432
+      ui_black_36: -8820884437805452451
+      ui_black_4: 37266647782589480
+      ui_black_5: -1471714462081294027
+      ui_black_6: 7273936883704799207
+      ui_black_7: -1805242320813509317
+      ui_black_8: 3561592412273379599
+      ui_black_9: 8530117545388377252
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

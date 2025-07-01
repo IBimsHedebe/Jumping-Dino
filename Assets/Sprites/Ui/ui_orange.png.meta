@@ -145,7 +145,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -183,7 +183,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1047,7 +1047,44 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ui_orange_0: 94302474536183779
+      ui_orange_1: -1006862088528162838
+      ui_orange_10: 4109943860375331778
+      ui_orange_11: 9134136614460167507
+      ui_orange_12: -3838805862590018469
+      ui_orange_13: -5532992363228172885
+      ui_orange_14: -1892119622055205566
+      ui_orange_15: 1116334752197381762
+      ui_orange_16: 906889856985836459
+      ui_orange_17: -775342096842758236
+      ui_orange_18: -8597492760561399257
+      ui_orange_19: -3283001773270515824
+      ui_orange_2: 4409459752828049895
+      ui_orange_20: 1223223896133988886
+      ui_orange_21: -1378998652916312527
+      ui_orange_22: 5848978579953497228
+      ui_orange_23: -7872496760281281111
+      ui_orange_24: -1366113789366491936
+      ui_orange_25: -2154420742943523006
+      ui_orange_26: 741688446584545375
+      ui_orange_27: -3270565132263596530
+      ui_orange_28: -993616463626561883
+      ui_orange_29: 6133216699719000818
+      ui_orange_3: 6616592412592841686
+      ui_orange_30: 437602801205572638
+      ui_orange_31: -3606715278099440576
+      ui_orange_32: 5170062818084416177
+      ui_orange_33: 4060975213549591991
+      ui_orange_34: 6392926764295063965
+      ui_orange_35: 5767811883951994156
+      ui_orange_36: 6222299406800804067
+      ui_orange_4: -8332930852071476203
+      ui_orange_5: -3815006368400576725
+      ui_orange_6: -5486140319267139539
+      ui_orange_7: 4030177908585237564
+      ui_orange_8: -6327481269005899404
+      ui_orange_9: -6611985340437227070
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -11,6 +11,10 @@ public class Movement : MonoBehaviour
     public LayerMask groundLayer;
     public LayerMask wallLayer;
 
+    // Edge correction variables
+    public float edgeCorrectionDistance = 0.3f;
+    public float edgeCorrectionForce = 5f;
+
     private Rigidbody2D rb;
     public bool isGrounded;
     private bool isWallSliding;
@@ -109,5 +113,10 @@ public class Movement : MonoBehaviour
             Gizmos.DrawWireSphere(groundCheck.position, 0.1f);
         if (wallCheck != null)
             Gizmos.DrawWireSphere(wallCheck.position, 0.1f);
+            
+        // Draw edge correction ray
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawRay(transform.position, Vector3.right * edgeCorrectionDistance);
+        Gizmos.DrawRay(transform.position, Vector3.left * edgeCorrectionDistance);
     }
 }

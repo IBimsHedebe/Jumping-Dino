@@ -145,7 +145,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -183,7 +183,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1047,7 +1047,44 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ui_yellow_0: 5876943558261407070
+      ui_yellow_1: -2317114270331426785
+      ui_yellow_10: -5203695718892246472
+      ui_yellow_11: 1488924465819658379
+      ui_yellow_12: -2550610738614277367
+      ui_yellow_13: -84784181631066475
+      ui_yellow_14: -4642077621595193516
+      ui_yellow_15: 1272137194539550274
+      ui_yellow_16: -633690339290747193
+      ui_yellow_17: 6484621142335180721
+      ui_yellow_18: 7392094610935439648
+      ui_yellow_19: 7607097640715337708
+      ui_yellow_2: 4209254801832350169
+      ui_yellow_20: -190034213809585431
+      ui_yellow_21: -2567548820179288980
+      ui_yellow_22: -4088842564291557398
+      ui_yellow_23: 3976411594724771782
+      ui_yellow_24: -3287895863204329189
+      ui_yellow_25: 8979219956366405784
+      ui_yellow_26: 7787728721882964678
+      ui_yellow_27: -480607988291939115
+      ui_yellow_28: -3904102284130492712
+      ui_yellow_29: -3763265426506335486
+      ui_yellow_3: -2555502830713977074
+      ui_yellow_30: -1579772285318183652
+      ui_yellow_31: 7108501599699311992
+      ui_yellow_32: 522459520631334672
+      ui_yellow_33: 2841200828055276073
+      ui_yellow_34: 4676816148395082756
+      ui_yellow_35: 7158464411725045274
+      ui_yellow_36: -6547829370007935285
+      ui_yellow_4: -2994284081316271936
+      ui_yellow_5: -7106888906719883591
+      ui_yellow_6: 6848564806225249924
+      ui_yellow_7: -7909685809296217938
+      ui_yellow_8: -3176835818443163614
+      ui_yellow_9: -3125427599825673560
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

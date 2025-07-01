@@ -145,7 +145,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -183,7 +183,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1047,7 +1047,44 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ui_blue_0: -4088889701678483932
+      ui_blue_1: -4871130614821455457
+      ui_blue_10: -775996218927079868
+      ui_blue_11: 2651648447011518677
+      ui_blue_12: -5693216143145930256
+      ui_blue_13: 5979571693548775885
+      ui_blue_14: -8129894968606648229
+      ui_blue_15: -4436157456712445961
+      ui_blue_16: -3163056011633200459
+      ui_blue_17: -343510789456999849
+      ui_blue_18: 7966624190713348916
+      ui_blue_19: -6159248482640465912
+      ui_blue_2: 3976274048778857394
+      ui_blue_20: -7174194873437835134
+      ui_blue_21: -2678570877501710786
+      ui_blue_22: -276851513990428861
+      ui_blue_23: -4876552400014661502
+      ui_blue_24: -6528483050019500917
+      ui_blue_25: 8774592368766028790
+      ui_blue_26: 3312768700063714300
+      ui_blue_27: 318794542930049024
+      ui_blue_28: -446235659319829827
+      ui_blue_29: 467850768352523802
+      ui_blue_3: 1816489159708979804
+      ui_blue_30: 4852798312881238596
+      ui_blue_31: 1044182693105447040
+      ui_blue_32: 7921334404274587476
+      ui_blue_33: -7307528707353996387
+      ui_blue_34: 2264866340640074405
+      ui_blue_35: -6357194202570914762
+      ui_blue_36: -427165972881052146
+      ui_blue_4: 7863042125006658851
+      ui_blue_5: 1273959024045398145
+      ui_blue_6: 2681928933065722489
+      ui_blue_7: 4264763793799647072
+      ui_blue_8: -4232675005945294403
+      ui_blue_9: 807883384561979113
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
