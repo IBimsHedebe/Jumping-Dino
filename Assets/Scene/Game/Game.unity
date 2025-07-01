@@ -356,6 +356,8 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
+  edgeCorrectionDistance: 0.3
+  edgeCorrectionForce: 5
   isGrounded: 0
   wallJumpForce: {x: 3, y: 10}
   wallJumpDuration: 0.2
@@ -554,7 +556,7 @@ MonoBehaviour:
   voidHeight: -15
   respawnPosition: {x: 0, y: 1, z: 0}
   damageAmount: 1
-  player: {fileID: 0}
+  player: {fileID: 557599266}
 --- !u!1 &564334339
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,14 +746,15 @@ MonoBehaviour:
   maxLength: 6
   minHeight: 1
   maxHeight: 5
+  platformCount: 100
   minGap: 2
   maxGap: 5
-  platform: {fileID: 7088023364905720374, guid: cb389af0bcc4b8d45b6ce0efbaf19b90, type: 3}
-  wall: {fileID: 7942554190485402644, guid: 67eedfdf8e61b024bb14f9186ec9e371, type: 3}
+  platformLeft: {fileID: 4228086083869841273, guid: 2f421523cd14ac345a3389bfb497e761, type: 3}
+  platformMiddleA: {fileID: 4228086083869841273, guid: c183328f91d73f048ae065eb5f1427cb, type: 3}
+  platformMiddleB: {fileID: 4228086083869841273, guid: 33fa603c88b1fc440a022721deccf261, type: 3}
+  platformRight: {fileID: 4228086083869841273, guid: 1d236e734f7567f4c851cfe9f3f3dc40, type: 3}
   posX: 0
   posY: 0
-  scHeight: 0
-  scWidth: 0
 --- !u!1 &1022991571
 GameObject:
   m_ObjectHideFlags: 0

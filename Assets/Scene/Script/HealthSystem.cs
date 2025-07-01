@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
 public class HealthSystem : MonoBehaviour
 {
     public int maxHealth = 3;
@@ -16,47 +17,40 @@ public class HealthSystem : MonoBehaviour
         UpdateHealthIcons();
     }
 
-    public void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-        if (currentHealth < 0)
-        {
-            currentHealth = 0; // Prevent health from going below zero
-        }
-        UpdateHealthIcons();
-        if (currentHealth == 0)
-        {
-            Die();
-        }
-    }
-
-    public void Heal(int amount)
-    {
-        currentHealth += amount;
-        if (currentHealth > maxHealth)
-        {
-            currentHealth = maxHealth; // Prevent health from exceeding max health
-        }
-        UpdateHealthIcons();
-    }
-
-    private void UpdateHealthIcons()
+    void UpdateHealthIcons()
     {
         for (int i = 0; i < healthIcons.Length; i++)
         {
             if (i < currentHealth)
             {
-                healthIcons[i].sprite = fullHealthIcon; // Set to full health icon
+                healthIcons[i].sprite = fullHealthIcon;
             }
             else
             {
-                healthIcons[i].sprite = emptyHealthIcon; // Set to empty health icon
+                healthIcons[i].sprite = emptyHealthIcon;
             }
         }
     }
 
-    private void Die()
+    public void TakeDamage(int damage)
     {
-        SceneManager.LoadScene("Game_Over_Scene"); // Load Game Over screen
+        currentHealth -= damage;
+        if (currentHealth < 0)
+        {
+            currentHealth = 0;
+        }
+        UpdateHealthIcons();
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        // Handle player death (e.g., show game over screen, reset level, etc.)
+        Debug.Log("Player has died.");
+        SceneManager.LoadScene("GameOver");
     }
 }
