@@ -6,8 +6,8 @@ public class CamController : MonoBehaviour
     public GameObject player; // Drag player here in inspector, or leave null to auto-find
     
     [Header("Follow Settings")]
-    public float offsetX = 0f; // Horizontal offset from the player
-    public float fixedY = 5f; // Fixed Y position for the camera
+    public float offsetX = 3.5f; // Horizontal offset from the player
+    public float fixedY = 6.5f; // Fixed Y position for the camera
     
     [Header("Smoothing")]
     public bool useSmoothing = false; // Disabled by default to prevent blurriness

@@ -5,9 +5,9 @@ public class BackgroundManager : MonoBehaviour
     [System.Serializable]
     public class BackgroundLayer
     {
-        public string spriteName;
-        public float scrollSpeed;
-        [HideInInspector] public GameObject[] parts;
+        public string spriteName;     // Image name (without extension)
+        public float scrollSpeed;     // Speed of scrolling
+        [HideInInspector] public GameObject[] parts; // Four parts for looping
     }
 
     public BackgroundLayer[] layers;
@@ -15,7 +15,6 @@ public class BackgroundManager : MonoBehaviour
     public Transform player; // Reference to the player transform
     
     private Vector3 lastPlayerPosition;
-    private Vector3 initialPlayerPosition;
 
     void Start()
     {
@@ -36,20 +35,14 @@ public class BackgroundManager : MonoBehaviour
                 Debug.LogWarning("BackgroundManager: No player found! Make sure your player GameObject has the 'Player' tag or assign the player manually in the inspector.");
             }
         }
-        else
-        {
-            Debug.Log("BackgroundManager: Player assigned - " + player.name);
-        }
 
         // Initialize last player position
         if (player != null)
-        {
             lastPlayerPosition = player.position;
-            initialPlayerPosition = player.position;
-        }
 
         foreach (var layer in layers)
         {
+            // Load sprite from Resources
             Sprite sprite = Resources.Load<Sprite>("comcept Worlds/Green lands/Background/" + layer.spriteName);
             if (sprite == null)
             {
@@ -57,30 +50,44 @@ public class BackgroundManager : MonoBehaviour
                 continue;
             }
 
-            layer.parts = new GameObject[2];
+            layer.parts = new GameObject[4];
 
+            // Calculate camera dimensions
             float screenHeight = 2f * mainCamera.orthographicSize;
             float screenWidth = screenHeight * mainCamera.aspect;
 
+            // Calculate sprite dimensions
             float spriteHeight = sprite.bounds.size.y;
             float spriteWidth = sprite.bounds.size.x;
 
-            float scale = screenHeight / spriteHeight;
-            float scaledWidth = spriteWidth * scale;
+            // Scale to match camera height exactly
+            float scaleY = screenHeight / spriteHeight;
+            float scaleX = scaleY; // Use same scale for both X and Y to maintain aspect ratio
+            
+            // Calculate the actual width after scaling
+            float scaledWidth = spriteWidth * scaleX;
 
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 4; i++)
             {
                 GameObject obj = new GameObject(layer.spriteName + "_" + i);
                 obj.transform.parent = this.transform;
 
                 SpriteRenderer sr = obj.AddComponent<SpriteRenderer>();
                 sr.sprite = sprite;
-                sr.sortingOrder = -layers.Length + System.Array.IndexOf(layers, layer);
+                sr.sortingOrder = -layers.Length + System.Array.IndexOf(layers, layer); // sky in back
 
-                // Scale to match screen height
-                obj.transform.localScale = new Vector3(scale, scale, 1);
-                // Initial positioning
-                obj.transform.position = new Vector3(i * scaledWidth, 0, 0);
+                // Apply uniform scale to fill the camera view
+                obj.transform.localScale = new Vector3(scaleX, scaleY, 1);
+                
+                // Position backgrounds to start from behind the camera and cover the right side
+                // Use a small overlap to prevent gaps while minimizing overlap
+                float minimalOverlap = scaledWidth * 0.01f; // 1% overlap
+                // Start from the left edge of camera view and position each part sequentially
+                float cameraLeft = mainCamera.transform.position.x - (mainCamera.orthographicSize * mainCamera.aspect);
+                float startX = cameraLeft - scaledWidth + (i * (scaledWidth - minimalOverlap));
+                // Align background center with camera center
+                float yPosition = mainCamera.transform.position.y;
+                obj.transform.position = new Vector3(startX, yPosition, 0);
 
                 layer.parts[i] = obj;
             }
@@ -89,58 +96,93 @@ public class BackgroundManager : MonoBehaviour
 
     void Update()
     {
-        // Check if player is moving
-        bool playerIsMoving = false;
+        ParallaxEffect();
+    }
+
+    void ParallaxEffect()
+    {
+        // Check if player is moving horizontally and in which direction
+        bool playerIsMovingHorizontally = false;
+        float movementDirection = 0f; // -1 for left, +1 for right
+        
         if (player != null)
         {
+            float horizontalMovement = player.position.x - lastPlayerPosition.x;
             float movementThreshold = 0.01f; // Adjust this value as needed
-            playerIsMoving = Vector3.Distance(player.position, lastPlayerPosition) > movementThreshold;
+            
+            if (Mathf.Abs(horizontalMovement) > movementThreshold)
+            {
+                playerIsMovingHorizontally = true;
+                movementDirection = Mathf.Sign(horizontalMovement); // Get direction (-1 or +1)
+            }
+            
             lastPlayerPosition = player.position;
         }
 
         foreach (var layer in layers)
         {
-            if (layer.parts == null) continue;
+            if (layer.parts == null || layer.parts.Length == 0) continue;
 
-            // Update background position to follow player horizontally
-            float playerMovementX = 0;
-            if (player != null)
+            // Get camera bounds for repositioning
+            float cameraLeftEdge = mainCamera.transform.position.x - (mainCamera.orthographicSize * mainCamera.aspect);
+            float cameraRightEdge = mainCamera.transform.position.x + (mainCamera.orthographicSize * mainCamera.aspect);
+
+            // Only scroll if player is moving horizontally
+            if (playerIsMovingHorizontally)
             {
-                playerMovementX = player.position.x - initialPlayerPosition.x;
-            }
-            
-            foreach (GameObject part in layer.parts)
-            {
-                Vector3 currentPos = part.transform.position;
-                // Move background relative to player's X movement with parallax effect
-                float parallaxOffset = playerMovementX * (layer.scrollSpeed / 10f); // Adjust divisor for parallax strength
-                part.transform.position = new Vector3(currentPos.x - parallaxOffset * Time.deltaTime, 0, currentPos.z);
-                
-                // Only scroll if player is moving
-                if (playerIsMoving)
+                foreach (GameObject part in layer.parts)
                 {
-                    part.transform.position += Vector3.left * layer.scrollSpeed * Time.deltaTime;
+                    if (part == null) continue;
+                    
+                    // Move the background in opposite direction to player movement
+                    // If player moves right (+1), background moves left (Vector3.left)
+                    // If player moves left (-1), background moves right (Vector3.right)
+                    Vector3 scrollDirection = movementDirection > 0 ? Vector3.left : Vector3.right;
+                    part.transform.position += scrollDirection * layer.scrollSpeed * Time.deltaTime;
                 }
             }
 
-            // Handle wrapping when parts go off screen
-            if (layer.parts.Length > 0 && layer.parts[0] != null)
+            if (layer.parts[0] != null)
             {
                 float width = layer.parts[0].GetComponent<SpriteRenderer>().bounds.size.x;
+                float minimalOverlap = width * 0.01f; // 1% overlap to prevent gaps
+                float bufferDistance = width * 0.5f; // Extra distance to ensure complete disappearance
 
-                for (int i = 0; i < 2; i++)
+                // Reposition if off-screen (both left and right sides)
+                for (int i = 0; i < layer.parts.Length; i++)
                 {
                     GameObject part = layer.parts[i];
-                    if (part.transform.position.x <= -width)
+                    if (part == null) continue;
+
+                    // If the part has moved completely off the left side of the camera with buffer
+                    if (part.transform.position.x + width/2 < cameraLeftEdge - bufferDistance)
                     {
-                        float rightMost = layer.parts[0].transform.position.x;
+                        // Find the rightmost position of all parts
+                        float rightMost = cameraLeftEdge;
                         foreach (var p in layer.parts)
                         {
-                            if (p.transform.position.x > rightMost)
+                            if (p != null && p.transform.position.x > rightMost)
                                 rightMost = p.transform.position.x;
                         }
 
-                        part.transform.position = new Vector3(rightMost + width, 0, 0);
+                        // Position this part to the right of the rightmost part with minimal overlap
+                        float yPosition = mainCamera.transform.position.y;
+                        part.transform.position = new Vector3(rightMost + width - minimalOverlap, yPosition, part.transform.position.z);
+                    }
+                    // If the part has moved completely off the right side of the camera with buffer
+                    else if (part.transform.position.x - width/2 > cameraRightEdge + bufferDistance)
+                    {
+                        // Find the leftmost position of all parts
+                        float leftMost = cameraRightEdge;
+                        foreach (var p in layer.parts)
+                        {
+                            if (p != null && p.transform.position.x < leftMost)
+                                leftMost = p.transform.position.x;
+                        }
+
+                        // Position this part to the left of the leftmost part with minimal overlap
+                        float yPosition = mainCamera.transform.position.y;
+                        part.transform.position = new Vector3(leftMost - width + minimalOverlap, yPosition, part.transform.position.z);
                     }
                 }
             }

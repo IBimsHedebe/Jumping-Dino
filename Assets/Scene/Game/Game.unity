@@ -261,7 +261,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 805565722}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &454189929
@@ -865,15 +866,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layers:
   - spriteName: sky
-    scrollSpeed: 0.1
+    scrollSpeed: 0.5
     parts: []
   - spriteName: clouds
-    scrollSpeed: 0.3
+    scrollSpeed: 1
     parts: []
   - spriteName: hill
-    scrollSpeed: 0.6
+    scrollSpeed: 2
     parts: []
   mainCamera: {fileID: 454189931}
+  player: {fileID: 557599270}
 --- !u!4 &805565722
 Transform:
   m_ObjectHideFlags: 0
@@ -882,12 +884,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805565720}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5556, y: 0.67294, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 454189928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1022991571
 GameObject:
@@ -1546,4 +1548,3 @@ SceneRoots:
   - {fileID: 2031884365}
   - {fileID: 1523845869}
   - {fileID: 416079502}
-  - {fileID: 805565722}
